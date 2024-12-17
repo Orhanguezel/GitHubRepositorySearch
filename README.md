@@ -19,7 +19,7 @@ This project is a simple web-based tool that allows users to search for GitHub r
 ---
 
 ### **Live Demo**  
-Check out the live demo [here](https://your-demo-link.com).
+Check out the live demo [here](https://orhanguezel.github.io/GitHubRepositorySearch/).
 
 ---
 
@@ -45,7 +45,7 @@ Check out the live demo [here](https://your-demo-link.com).
 1. **Clone the Repository**  
    Open your terminal and run:  
    ```bash
-   git clone https://github.com/your-username/github-repo-search.git
+   git clone https://github.com/Orhanguezel/GitHubRepositorySearch.git
    cd github-repo-search
    ```
 

@@ -1,4 +1,4 @@
-
+/* Genel Stil */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #010409;
+  background-color: #010409; /* Arka plan siyah */
   color: white;
   line-height: 1.6;
   padding: 20px;
@@ -18,19 +18,13 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
   margin-bottom: 10px;
-}
-
-h3 {
-  margin-bottom: 5px;
 }
 
 img {
   width: 40px;
-
+  border-radius: 50%;
 }
-
 
 .container {
   display: flex;
@@ -41,71 +35,163 @@ img {
 
 .repo,
 .user {
-  background: #010409;
-  border: 1px solid #ddd;
+  background: #161b22;
+  border: 1px solid #30363d;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
   max-width: 500px;
-  margin: 10px;
 }
 
 input {
   width: 100%;
   padding: 8px 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #c9d1d9;
   border-radius: 4px;
-  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #58a6ff;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #58a6ff;
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0366d6;
 }
-
-#repo-container,
-#user-container {
-  margin-top: 15px;
-}
-
 
 .repo-item,
-#user-container div {
-  background: #010409;
-  border: 1px solid #ddd;
+.user-info {
+  background: #0d1117;
+  border: 1px solid #30363d;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
-.repo-item a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-}
-
-.repo-item a:hover {
-  text-decoration: underline;
-}
-
-#user-container img {
+.user-info img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto 10px;
 }
+
+.user-info h3,
+.user-info p {
+  text-align: center;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.user-stats div {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.user-stats div strong {
+  color: #58a6ff;
+}
+
+.github-stats-card {
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.github-stats-card iframe {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+
+.github-stats-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #58a6ff;
+}
+
+.github-stats-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.github-stats-card strong {
+  color: #8b949e;
+}
+
+.github-stats-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .repo,
+  .user {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-stats {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .github-stats-card {
+    padding: 10px;
+  }
+
+  .github-stats-card h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 8px;
+  }
+}
+
 
 
 @media (max-width: 768px) {
@@ -113,14 +199,8 @@ button:hover {
   .user {
     max-width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  button {
-    width: 100%;
+  .user-stats {
+    flex-direction: column;
   }
 }
